@@ -1,0 +1,91 @@
+ArchimedesShips
+cofh
+railcraft
+saintspack
+VoxelMods
+bspkrsCorev
+TreeCapitatorForgerUniversal
+Herblore Mod
+Artifice
+AWbetaMC
+AWNEIPluginMC
+balancedexchange   
+bcmod   
+bdlibmc
+BetterStorage
+Blood Magic
+Botania beta
+Calclavia Core
+CodeChickenCore 
+CoFHCore
+CompactDisplayHUD
+copiousdogsalpha
+DartCraft Beta 
+defaultstructurepack
+DivineSmokerWaterPipeMod
+DoomlikeDungeonsMC
+DragonAPI 
+EnderIO
+EnderStorage 
+Evoca
+ExpandedRedstone  
+ExtrabiomesXLuniversal 
+files^MobAmputation
+ForbiddenMagic 
+forestry
+fossilsarchreportedv
+gendustrymc
+GLSLShadersMod
+HardcoreEnderExpansion
+Hats
+InventoryTweaksMod 
+KeithyUtils
+luckyblocks 
+magicbees
+MagitekMechsemc
+Render Player API forge 
+MCA MC
+Metallurgy
+MetallurgyBees
+Millenaire
+Minions
+MobiusCore
+MorphBeta
+NaturamcX
+Necromancy
+NetherOres
+NetherX
+NotEnoughItems 
+Numina
+obsidiplatesuniversal
+OpenBlocks
+OpenModsLib
+PowerCrystalsCore
+Railcraft
+Random Things
+RedstonePasteMod
+Reliquaryb
+RenderPlayerAPI
+RopePlus
+Saintspack
+slickutil
+Slime Dungeons 
+SoulShardsuniversalsrg
+StevesCartsb
+TaleofKingdomsVPreRelease
+TConstructmc
+Thaumcraftg
+ThaumcraftExtras
+thaumcraftmobaspectsXebuild
+ThaumicTinkerer
+ThaumicTinkererKAMI
+TheCampingMode
+UltimateNether
+UniversalElectricityMod
+UpdateCheckerMod
+util^iChunUtil
+vanillarecipes
+Wailaa
+WeaponMod
+witchery 
+ZansMinimap
