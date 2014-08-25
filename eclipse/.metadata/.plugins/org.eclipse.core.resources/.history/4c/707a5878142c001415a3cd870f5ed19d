@@ -1,0 +1,168 @@
+package pdox.KCraft.KCraftmod.core;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemStack;
+import pdox.KCraft.KCraftmod.block.blockPyrope;
+import pdox.KCraft.KCraftmod.block.blockRhodolite;
+import pdox.KCraft.KCraftmod.block.mediKit;
+import pdox.KCraft.KCraftmod.block.orePeridot;
+import pdox.KCraft.KCraftmod.block.orePyrope;
+import pdox.KCraft.KCraftmod.block.oreRhodolite;
+import pdox.KCraft.KCraftmod.proxy.CommonProxy;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+
+@Mod(modid = KCraft.modid, name = "KCraft", version = "PRE-ALPHA")
+public class KCraft {
+	public static final String modid = "KCraft";
+	public static ToolMaterial jadeToolMaterial;
+	@Instance(modid)
+	public static KCraft instance;
+
+
+	//Blocks
+	public static Block blockPeridot;
+	public static Block blockPyrope;
+	public static Block blockRhodolite;
+	public static Block mediKit;
+	public static Block orePeridot;
+	public static Block orePyrope;
+	public static Block oreRhodolite;
+
+
+
+
+	//Items
+    //public static Item ingotPlatinum;
+
+
+
+
+
+	public static final Block.SoundType soundTypePiston = new Block.SoundType("stone", 1.0F, 1.0F);
+	private static final Object ItemStack = null;
+	@SidedProxy(clientSide="pdox.KCraft.KCraftmod.proxy.ClientProxy", serverSide="pdox.KCraft.KCraftmod.proxy.CommonProxy")
+	public static CommonProxy proxy;
+
+
+
+
+	public static CreativeTabs RPCoreBTab = new CreativeTabs(modid) {
+	    @SideOnly(Side.CLIENT)
+	    public Item getTabIconItem() {
+	        return Item.getItemFromBlock(Blocks.bedrock);
+	    }
+	};
+	public static CreativeTabs RPCoreITab = new CreativeTabs(modid) {
+	    @SideOnly(Side.CLIENT)
+	    public Item getTabIconItem() {
+	        return Items.blaze_rod;
+	    }
+	};
+
+
+
+
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent e){
+		//ToolMaterial
+		//To Create A Tool Material Do This ToolMaterialName = EnumHelper.addToolMaterial(name, harvestLevel, maxUses, efficiency, damage, enchantability)
+		/*
+		 * 0 = Wood/Gold
+		 * 1 = Stone
+		 * 2 = Iron
+		 * 3 = Diamond
+		 * 4 = Jade
+		 * 5 = Reinforced Jade
+		 */
+		//Fluid
+
+
+		//jadeToolMaterial = EnumHelper.addToolMaterial("JADE", 4, 35, 16F, 7F, 50);
+
+
+
+
+		//Blocks----------
+		blockPeridot = new blockPeridot(Material.rock).setCreativeTab(RPCoreBTab).setBlockName("blockPeridot").setTextureName(modid + ":" + "blockPeridot").setHardness(5F).setResistance(1F);
+		blockPyrope = new blockPyrope(Material.rock).setCreativeTab(RPCoreBTab).setBlockName("blockPyrope").setTextureName(modid + ":" + "blockPyrope").setHardness(5F).setResistance(1F);
+		blockRhodolite = new blockRhodolite(Material.rock).setCreativeTab(RPCoreBTab).setBlockName("blockRhodolite").setTextureName(modid + ":" + "blockRhodolite").setHardness(5F).setResistance(1F);
+		mediKit = new mediKit(Material.rock).setCreativeTab(RPCoreBTab).setBlockName("mediKit").setTextureName(modid + ":" + "mediKit").setHardness(5F).setResistance(1F);
+		orePeridot = new orePeridot(Material.rock).setCreativeTab(RPCoreBTab).setBlockName("orePeridot").setTextureName(modid + ":" + "orePeridot").setHardness(5F).setResistance(1F);
+		orePyrope = new orePyrope(Material.rock).setCreativeTab(RPCoreBTab).setBlockName("orePyrope").setTextureName(modid + ":" + "orePyrope").setHardness(5F).setResistance(1F);
+		oreRhodolite = new oreRhodolite(Material.rock).setCreativeTab(RPCoreBTab).setBlockName("oreRhodolite").setTextureName(modid + ":" + "oreRhodolite").setHardness(5F).setResistance(1F);
+
+
+
+
+
+		//oreSilicon= new blockRPBlockoreSilicon (Material.rock).setCreativeTab(RPCoreBTab).setBlockName("oreSilicon").setBlockTextureName(modid + ":" + "oreSilicon").setHardness(5F).setResistance(1F);
+
+        //Item
+        //dustMagickcompound = new ItemMagic().setUnlocalizedName("Magick Compound").setTextureName(modid + ":" + "magick_compound");
+
+
+
+
+
+	}
+
+	@EventHandler
+	public void init(FMLInitializationEvent e)
+	{
+		proxy.registerKeyBindings();
+        NetworkRegistry.INSTANCE.registerGuiHandler(instance, proxy);
+		ItemStack slabM0 = new ItemStack (Blocks.stone_slab);
+		slabM0.setItemDamage(5);
+
+
+		//Recipies.registerBlock(obsidianWhite,"White Obsidian");
+
+
+
+		//ITEMS BELOW THIS LINE -----------------------------------------------
+
+
+       // Recipies.registerItem(ingotSteel,"Steel Ingot");
+
+
+
+        //Smelting
+		// Recipies.registerSmeltingItemWUM(dustSteel,ingotSteel,5F); Item To Item
+		//Recipies.registerSmeltingBlockToItemWUM(oreSilicon,ingotSilicon,5F); Block To Item
+		//Recipies.registerSmeltingBlockWUM(obsidianWhite,Blocks.obsidian,5f);Block To Block
+
+
+
+
+
+
+
+        //Crafting recipes
+        //GameRegistry.addShapedRecipe(new ItemStack (knife), "   ", " x ", " 0 ", 'x',new ItemStack(Items.iron_ingot), '0',new ItemStack(Items.stick));
+		//GameRegistry.addShapelessRecipe(new ItemStack (TCAM), new ItemStack (Blocks.coal_block), new ItemStack (ingotTungsten));
+
+
+
+
+
+		GameRegistry.registerWorldGenerator(new KCWorldGen(), 1);
+
+		//GameRegistry.registerFuelHandler(new RPFuelHandler());
+	}
+}
+

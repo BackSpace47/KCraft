@@ -1,0 +1,30 @@
+package pdox.KCraft.KCraftmod;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+
+@Mod(modid = KCraft.MODID, version = KCraft.VERSION)
+public class KCraft
+{
+    public static final String MODID = "KakeKraft";
+    public static final String VERSION = "Pre-Alpha 1.0";
+
+    @EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+    	Item PyropeGarnet;
+
+
+
+
+
+
+
+
+
+
+    }
+}
